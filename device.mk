@@ -81,6 +81,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.sf.lcd_density=160
 
+# Don't preload EGL drivers in Zygote at boot time
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.zygote.disable_gl_preload=true
+
 $(call inherit-product-if-exists, vendor/ti/panda/device-vendor.mk)
 $(call inherit-product, frameworks/native/build/tablet-dalvik-heap.mk)
 $(call inherit-product, hardware/ti/omap4xxx/omap4.mk)

@@ -73,3 +73,5 @@ BOARD_WLAN_DEVICE                := wl12xx_mac80211
 #TARGET_PROVIDES_INIT_RC := true
 #TARGET_USERIMAGES_SPARSE_EXT_DISABLED := true
 
+# Force the screenshot path to CPU consumer
+COMMON_GLOBAL_CFLAGS += -DFORCE_SCREENSHOT_CPU_PATH
